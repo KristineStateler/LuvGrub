@@ -5,7 +5,7 @@ class CreateRecipes < ActiveRecord::Migration[5.2]
       t.string :ingredients, null: false
       t.text :steps, null: false
       t.string :type, null: false
-      
+
       t.belongs_to :user
 
       t.timestamps

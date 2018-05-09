@@ -15,3 +15,7 @@
  *= require foundation_and_overrides
 
  */
+.todays-articles{
+  float: right;
+  padding-bottom: 0%;
+}
