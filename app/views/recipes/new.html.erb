@@ -1,0 +1,27 @@
+<% if current_user %>
+	<h1>Add A New Recipe!</h1>
+
+	<div class="submitted-recipes">
+		<%= form_for (@recipe) do |f| %>
+
+		<%= f.label :name, 'Name' %>
+		<%= f.text_field :name %>
+
+		<%= f.label :ingredients, 'Ingredients' %>
+		<%= f.text_field :ingredients %>
+
+		<%= f.label :steps, 'Steps' %>
+		<%= f.text_field :steps %>
+
+	  <%= f.label :category, 'Category' %>
+		<%= f.text_field :category %>
+
+		<%= f.label :picture %>
+		<%= f.file_field :picture %>
+
+		<%= f.submit 'Add Recipe' %>
+		<% end  %>
+	</div>
+<% else %>
+	<h1>Please sign in to add a new recipe!</h1>
+<% end %>

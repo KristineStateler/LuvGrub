@@ -2,15 +2,15 @@
   "name": "Online-Oven",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "~3.3.0",
-    "babel-preset-react": "~6.24.1",
-    "prop-types": "~15.6.0",
-    "react": "~15.4.2",
-    "react-dom": "~15.4.2"
+    "@rails/webpacker": "3.5",
+    "babel-preset-react": "^6.24.1",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
-    "webpack-dev-server": "^2.11.1",
-    "webpack-cli": "^2.0.10",
     "enzyme": "~2.9.1",
     "jasmine-ajax": "3.2.0",
     "jasmine-core": "~2.4.1",
@@ -23,7 +23,9 @@
     "karma-spec-reporter": "0.0.26",
     "karma-webpack": "2.0.1",
     "phantomjs-prebuilt": "~2.1.14",
-    "react-addons-test-utils": "~15.6.2"
+    "react-addons-test-utils": "~15.6.2",
+    "webpack-cli": "^2.0.10",
+    "webpack-dev-server": "2.11.2"
   },
   "scripts": {
     "start": "./bin/webpack-dev-server",
