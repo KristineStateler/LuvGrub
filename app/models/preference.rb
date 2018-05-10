@@ -1,9 +1,6 @@
 class Preference < ApplicationRecord
 
-  validates :preference
-
-
-  belongs_to :review
+  belongs_to :recipe
   belongs_to :user
 
 end

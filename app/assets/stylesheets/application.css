@@ -34,7 +34,8 @@
   margin-left: 20%;
   margin-right: 20%;
   padding-top: 4%;
-  background-color: #caced1;
+  background-color: rgba(176, 223, 223, 0.7);
+  margin-top: 7%;
 }
 
 .like-buttons {

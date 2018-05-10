@@ -29,29 +29,39 @@ swipeLeft(){
 }
 
 
-handleSwipe(type) {
-  let recipeID = this.state.recipes[this.state.currentRecipe].id
-  let fetchBody = { id: recipeID, type: type }
-  fetch('api_v1_preferences',
-    { method: "POST",
-      body: JSON.stringify(fetchBody),
-      credentials: 'include' })
+handleSwipe(type){
+    let recipeId = this.state.recipes[this.state.currentRecipe].id
+    // debugger;
+    let fetchR = { id: recipeId }
+    fetch('/api/v1/preferences',
+      { credentials: 'same-origin',
+        headers: { 'Accept': 'application/json',
+       'Content-Type': 'application/json' },
+        method: "POST",
+        body: JSON.stringify(fetchR),
+      })
+      .then(response => {
+        if (response.ok) {
+          return response;
+        } else {
+          let errorMessage = `${response.status} (${response.statusText})`,
+            error = new Error(errorMessage);
+          throw(error);
+        }
+      })
       .then((response) => {
         let recipe = response.json()
         return recipe
       }).then((response) => {
-        let name = response.name
         let nextRecipe;
-        if (this.state.currentRecipe < this.state.recipes.length - 1) {
-          nextRecipe == this.state.currentRecipe + 1
+        if (this.state.currentRecipe < this.state.recipes.length - 1){
+          nextRecipe= this.state.currentRecipe + 1
         } else {
           nextRecipe = 0
         }
-
         this.setState({ currentRecipe: nextRecipe })
       })
-
-}
+  }
 
 
 componentDidMount(){
@@ -69,43 +79,73 @@ fetch('/api/v1/recipes')
 
 
  render(){
-let recipes
+let name
 if (this.state.recipes[this.state.currentRecipe]) {
-  recipes = this.state.recipes[this.state.currentRecipe].picture.url
+  name = this.state.recipes[this.state.currentRecipe].name
 } else {
-  recipes = ""
+  name = ""
 }
 
+let category
+if (this.state.recipes[this.state.currentRecipe]) {
+  category = this.state.recipes[this.state.currentRecipe].category
+} else {
+  category = ""
+}
 
-   let swipeRight;
-   if (this.state.recipes[this.state.currentRecipe]) {
-   swipeRight = () => { this.handleSwipe("right") };
- }
+let picture
+if (this.state.recipes[this.state.currentRecipe]) {
+  picture = this.state.recipes[this.state.currentRecipe].picture.url
+} else {
+  picture = ""
+}
+
+let steps
+if (this.state.recipes[this.state.currentRecipe]) {
+  steps = this.state.recipes[this.state.currentRecipe].steps
+} else {
+  steps = ""
+}
+
+let ingredients
+if (this.state.recipes[this.state.currentRecipe]) {
+  ingredients = this.state.recipes[this.state.currentRecipe].ingredients
+} else {
+  ingredients = ""
+}
 
 
   return(
 
   <div>
-
-        <div className="recipe-tile">
-          <RecipeTile url={recipes} />
-          <div className="like-buttons">
-          <LikeTile
-            type="right"
-            handleSwipe={swipeRight}/>
-
-        <div>
-          <DislikeTile type="left"
-            handleSwipe={this.swipeLeft}
-          />
-        </div>
-        </div>
+      <div className="recipe-tile">
+          <RecipeTile
+            category={category}
+            name={name}
+            picture={picture}
+            steps={steps}
+            ingredients={ingredients}
+           />
+           <div className="like-buttons">
+              <LikeTile
+                type="right"
+                handleSwipe={this.handleSwipe}
+              />
+          <div>
+            <DislikeTile type="left"
+              handleSwipe={this.swipeLeft}
+            />
+          </div>
+          </div>
       </div>
-        <div>
-          <APIContainer
-          />
-        </div>
-      </div>
+          <div>
+            <h2>Food I Like</h2>
+          </div>
+          <div>
+            <APIContainer
+            />
+          </div>
+  </div>
     )
   }
 }
