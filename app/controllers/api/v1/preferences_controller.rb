@@ -1,7 +1,9 @@
 class Api::V1::PreferencesController < ApplicationController
 
-  def index
+  protect_from_forgery unless: -> { request.format.json? }
 
+  def index
+    @preference = Preference.all
   end
 
   def destroy
@@ -14,10 +16,11 @@ class Api::V1::PreferencesController < ApplicationController
     data = JSON.parse(request.body.read)
     recipe = Recipe.find(data["id"])
     type = data["type"]
-    if type == "superLike"
-      Preference.create(user: current_user, recipe: recipe, superlike: true)
+    if type == "right"
+      Preference.create(user: current_user, recipe: recipe, preference: true)
     else
       Preference.create(user: current_user, recipe: recipe)
     end
     render json: recipe
   end
+end
