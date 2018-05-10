@@ -87,7 +87,7 @@ if (this.state.recipes[this.state.currentRecipe]) {
 
   <div>
 
-        <div>
+        <div className="recipe-tile">
           <RecipeTile url={recipes} />
           <div className="like-buttons">
           <LikeTile
