@@ -3,7 +3,7 @@ class Api::V1::PreferencesController < ApplicationController
   protect_from_forgery unless: -> { request.format.json? }
 
   def index
-    @preference = Preference.all
+    render json: Preference.all
   end
 
   def show
