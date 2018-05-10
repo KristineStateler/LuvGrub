@@ -15,6 +15,13 @@
  *= require foundation_and_overrides
 
  */
+
+ body{
+   background-image: url("images/background.png");
+   height: 100%;
+ }
+
+
 .todays-articles{
   float: right;
   padding-bottom: 0%;
@@ -22,10 +29,20 @@
 
 .recipe-tile {
   text-align: center;
-  border: 2px;
+  border: 6px;
+  border-style: ridge;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-top: 4%;
+  background-color: #caced1;
 }
 
 .like-buttons {
-  font-size: 60px;
+  font-size: 90px;
   text-align: center;
+}
+
+.like-button {
+  float: right;
+  padding-right: 20%;
 }
