@@ -6,7 +6,7 @@ class Api::V1::PreferencesController < ApplicationController
     @preference = Preference.all
   end
 
-  def destroy
+  def show
     @id = params[:id]
     @preference = Preference.find(@id)
     @user = @preference.user

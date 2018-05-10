@@ -9,7 +9,8 @@ class RecipeList extends React.Component {
     super(props);
     this.state = {
       recipes: [],
-      currentRecipe: 0
+      currentRecipe: 0,
+      recipesLiked: []
     }
 
     this.swipeLeft = this.swipeLeft.bind(this);
@@ -31,7 +32,6 @@ swipeLeft(){
 
 handleSwipe(type){
     let recipeId = this.state.recipes[this.state.currentRecipe].id
-    // debugger;
     let fetchR = { id: recipeId }
     fetch('/api/v1/preferences',
       { credentials: 'same-origin',
@@ -77,7 +77,6 @@ fetch('/api/v1/recipes')
 }
 
 
-
  render(){
 let name
 if (this.state.recipes[this.state.currentRecipe]) {
@@ -117,7 +116,14 @@ if (this.state.recipes[this.state.currentRecipe]) {
 
   return(
 
+
   <div>
+    <div className="side-bar">
+      <div>
+        <APIContainer
+        />
+      </div>
+    </div>
       <div className="recipe-tile">
           <RecipeTile
             category={category}
@@ -138,13 +144,6 @@ if (this.state.recipes[this.state.currentRecipe]) {
           </div>
           </div>
       </div>
-          <div>
-            <h2>Food I Like</h2>
-          </div>
-          <div>
-            <APIContainer
-            />
-          </div>
   </div>
     )
   }
