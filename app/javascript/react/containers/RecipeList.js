@@ -120,6 +120,7 @@ if (this.state.recipes[this.state.currentRecipe]) {
   <div>
     <div className="side-bar">
       <div>
+        TEST
         <APIContainer
         />
       </div>
