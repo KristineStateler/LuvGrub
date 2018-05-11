@@ -3,6 +3,7 @@ import APIContainer from './APIContainer'
 import RecipeTile from '../components/RecipeTile'
 import LikeTile from '../components/LikeTile'
 import DislikeTile from '../components/DislikeTile'
+import SearchBar from '../components/SearchBar'
 
 class RecipeList extends React.Component {
   constructor(props){
@@ -10,11 +11,14 @@ class RecipeList extends React.Component {
     this.state = {
       recipes: [],
       currentRecipe: 0,
-      recipesLiked: []
+      recipesLiked: [],
+      search: '',
+      finalResults: []
     }
 
     this.swipeLeft = this.swipeLeft.bind(this);
     this.handleSwipe = this.handleSwipe.bind(this);
+    this.handleChange=this.handleChange.bind(this);
 
 }
 
@@ -76,8 +80,41 @@ fetch('/api/v1/recipes')
   })
 }
 
+handleChange(event) {
+  let formPayload = {search: event.target.value}
+  let searchResults = []
+  let search = formPayload.search.toLowerCase();
+
+  this.state.recipes.forEach((recipe) => {
+    if (recipe["name"].toLowerCase().includes(search)) {
+     searchResults.push(recipe)
+   }
+    this.setState({
+      recipes: searchResults,
+      search: event.target.value
+    })
+    debugger
+  })
+}
+
+
 
  render(){
+
+   let finalResults = this.state.finalResults.map(recipe => {
+     debugger
+         return(
+           <RecipeTile
+             key = {recipe.id}
+             id = {recipe.id}
+             title = {recipe.name}
+             category = {recipe.category}
+             ingredients = {recipe.ingredients}
+             steps = {recipe.steps}
+           />
+         )
+       })
+
 let name
 if (this.state.recipes[this.state.currentRecipe]) {
   name = this.state.recipes[this.state.currentRecipe].name
@@ -120,7 +157,10 @@ if (this.state.recipes[this.state.currentRecipe]) {
   <div>
     <div className="side-bar">
       <div>
-        TEST
+        <SearchBar
+        />
+      </div>
+      <div>
         <APIContainer
         />
       </div>
