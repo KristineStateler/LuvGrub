@@ -6,27 +6,38 @@ class LikedRecipes extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      likedRecipes: []
+      recipes: []
     }
 }
 
-
-componentDidMount(){
-fetch('/api/v1/preferences')
-  .then(response =>
-    response.json())
-    .then(body =>{
-    this.setState({
-      likedRecipes: likedRecipes
-    });
+componentDidMount() {
+  fetch('/api/v1/preferences', {
+    credentials: 'same-origin'
   })
+    .then(response => {
+      if (response.ok) {
+        return response;
+      } else {
+        let errorMessage = `${response.status} (${response.statusText})`,
+          error = new Error(errorMessage);
+        throw(error);
+      }
+    })
+    .then(response => response.json())
+    .then(body => {
+      this.setState({
+        recipes: recipes
+      });
+    })
+    .catch(error => console.error (`Error in fetch: ${error.message}`));
 }
+
+
 
 
 render() {
 
-  if (this.state.likedRecipes)
-
+if (this.props.recipes) {
   var likedRecipes = this.state.likedRecipes.map((recipe) => {
 
     return (
@@ -40,7 +51,7 @@ render() {
         />
    )
   })
-
+}
 
   return(
 
