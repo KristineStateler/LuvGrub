@@ -1,25 +1,25 @@
 <% if current_user %>
-	<h1>Add A New Recipe!</h1>
+	<h6>Add A New Recipe!</h6>
 
 	<div class="submitted-recipes">
 		<%= form_for (@recipe) do |f| %>
 
-		<%= f.label :name, 'Name' %>
-		<%= f.text_field :name %>
+		<h5><%= f.label :name, 'Name' %></h5>
+		<h5><%= f.text_field :name %></h5>
 
-		<%= f.label :ingredients, 'Ingredients' %>
-		<%= f.text_field :ingredients %>
+		<h5><%= f.label :ingredients, 'Ingredients' %></h5>
+		<h5><%= f.text_field :ingredients %></h5>
 
-		<%= f.label :steps, 'Steps' %>
-		<%= f.text_field :steps %>
+		<h5><%= f.label :steps, 'Steps' %></h5>
+		<h5><%= f.text_field :steps %></h5>
 
-	  <%= f.label :category, 'Category' %>
-		<%= f.text_field :category %>
+	  <h5><%= f.label :category, 'Category' %></h5>
+		<h5><%= f.text_field :category %></h5>
 
-		<%= f.label :picture %>
-		<%= f.file_field :picture %>
+		<h5><%= f.label :picture %></h5>
+		<h5><%= f.file_field :picture %></h5>
 
-		<%= f.submit 'Add Recipe' %>
+		<h5><%= f.submit 'Add Recipe' %></h5>
 		<% end  %>
 	</div>
 <% else %>
