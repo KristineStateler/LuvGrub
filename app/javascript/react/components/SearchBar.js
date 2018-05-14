@@ -59,7 +59,7 @@ class SearchBar extends Component {
         <RecipeTile
           key = {recipe.id}
           id = {recipe.id}
-          title = {recipe.name}
+          name = {recipe.name}
           category = {recipe.category}
           ingredients = {recipe.ingredients}
           steps = {recipe.steps}
@@ -68,7 +68,7 @@ class SearchBar extends Component {
     })
     return(
      <div>
-       <div>
+       <div className="search-bar">
          <input
            id="search"
            type='text'

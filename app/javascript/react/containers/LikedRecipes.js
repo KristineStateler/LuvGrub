@@ -8,6 +8,7 @@ class LikedRecipes extends React.Component {
     this.state = {
       recipes: []
     }
+    this.allLikedRecipes = this.allLikedRecipes.bind(this)
 }
 
 componentDidMount() {
@@ -26,39 +27,40 @@ componentDidMount() {
     .then(response => response.json())
     .then(body => {
       this.setState({
-        recipes: recipes
+        recipes: body
       });
     })
     .catch(error => console.error (`Error in fetch: ${error.message}`));
 }
 
+allLikedRecipes(){
+  if (this.state.recipes.length != 0) {
+    let likedRecipes = this.state.recipes.map((recipe) => {
 
+      return (
+          <LikedRecipe
+            key = {recipe.id}
+            category = {recipe.category}
+            name = {recipe.name}
+            picture={recipe.picture}
+            steps={recipe.steps}
+            ingredients={recipe.ingredients}
+          />
+     )
+    })
+  }
+}
 
 
 render() {
 
-if (this.props.recipes) {
-  var likedRecipes = this.state.likedRecipes.map((recipe) => {
 
-    return (
-        <LikedRecipe
-          key = {recipe.id}
-          category = {recipe.category}
-          name = {recipe.name}
-          picture={recipe.picture}
-          steps={recipe.steps}
-          ingredients={recipe.ingredients}
-        />
-   )
-  })
-}
 
   return(
 
     <div>
-    {likedRecipes}
-
-   </div>
+      {this.allLikedRecipes()}
+    </div>
   )
   }
 }
