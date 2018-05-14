@@ -35,6 +35,7 @@ componentDidMount() {
 
 allLikedRecipes(){
   if (this.state.recipes.length != 0) {
+
     let likedRecipes = this.state.recipes.map((recipe) => {
 
       return (
@@ -42,12 +43,13 @@ allLikedRecipes(){
             key = {recipe.id}
             category = {recipe.category}
             name = {recipe.name}
-            picture={recipe.picture}
+            picture={recipe.picture.url}
             steps={recipe.steps}
             ingredients={recipe.ingredients}
           />
      )
     })
+    return likedRecipes
   }
 }
 

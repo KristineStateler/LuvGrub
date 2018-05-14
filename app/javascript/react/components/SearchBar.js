@@ -68,7 +68,7 @@ class SearchBar extends Component {
     })
     return(
      <div>
-       <div className="search-bar">
+       <div className="side-bar">
          <input
            id="search"
            type='text'
