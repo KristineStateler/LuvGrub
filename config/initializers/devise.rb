@@ -282,5 +282,5 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = '/my_engine/users/auth'
 
 
-  config.omniauth :facebook, 597781910569071, 9eef10b0538ae16fd710e8adb990cd06, callback_url: "http://localhost:3000/users/auth/facebook/callback"
+  config.omniauth :facebook, 597781910569071, "9eef10b0538ae16fd710e8adb990cd06", callback_url: "http://localhost:3000/users/auth/facebook/callback"
 end
