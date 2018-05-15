@@ -68,14 +68,14 @@ class SearchBar extends Component {
       )
     })
     return(
-     <div>
+     <div className="search-bar">
        <div className="side-bar">
          <input
            id="search"
            type='text'
            value={this.state.search}
            onChange={this.handleChange}
-           placeholder="Search for specific recipes here!"
+           placeholder="Have a recipe in mind? Look here!"
          />
          <input type = 'submit' value = 'Search' onClick = {this.handleSubmit}/>
        </div>

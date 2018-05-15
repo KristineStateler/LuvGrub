@@ -19,19 +19,23 @@
  .topnav {
      background-color: #C2C1B5;
      overflow: hidden;
+     height: 6%;
 
+ }
 
+ .header{
+   
  }
 
  /* Style the links inside the navigation bar */
  .topnav a {
      float: left;
-     color: black;
+     color: #3F4636;
      text-align: center;
      padding: 14px 16px;
      text-decoration: bold;
-     font-size: 100px;
-     font-family: 'Amatic SC';
+     font-size: 30px;
+     font-family:'Poppins', sans-serif;
  }
 
  .topnav p {
@@ -40,25 +44,25 @@
      text-align: center;
      padding: 14px 16px;
      text-decoration: bold;
-     font-size: 100px;
-    font-family: 'Amatic SC';
+     font-size: 30px;
+    font-family: 'Poppins', sans-serif;
  }
 
  /* Change the color of links on hover */
  .topnav a:hover {
-     background-color: #ddd;
+     background-color: #E4CCA5;
      color: black;
  }
 
  /* Add a color to the active/current link */
  .topnav a.active {
-     background-color: #4CAF50;
+     background-color: #3F4636;
      color: white;
  }
 
 
  body{
-   background: url(images/pineapples.jpg) no-repeat center center fixed;
+   background: url(pineapples.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -67,12 +71,11 @@
 
 
 
-
   p, h2, h3, h4,h5,li, ul, ol {
-   font-family: 'Amatic SC';
+   font-family: 'Poppins', sans-serif;
    color: #5e8b25;
    font-weight: bold;
-   font-size: 70px;
+   font-size: 40px;
  }
 
   img {
@@ -80,15 +83,17 @@
     height: auto;
 }
 
+
 h1{
-  font-family: 'Amatic SC';
-  color: #EBC37C;
+  font-family: 'Poppins', sans-serif;
+  color: #3F4636;
   font-weight: bold;
-  font-size: 150px;
+  font-size: 100px;
+  text-align: center;
 }
 
  label {
-   font-family: 'Amatic SC';
+   font-family: 'Poppins', sans-serif;
    color: #484a42;
    font-weight: bold;
    font-size: 70px;
@@ -96,7 +101,7 @@ h1{
  }
 
  h6{
-   font-family: 'Amatic SC';
+   font-family: 'Poppins', sans-serif;
    color: #5e8b25;
    font-weight: bold;
    font-size: 110px;
@@ -120,19 +125,19 @@ input {
 }
 
 
+
 .recipe-tile {
   text-align: right;
   border: 15px;
   border-style: ridge;
-  margin-left: 40%;
+  margin-left: 30%;
   margin-right: 30%;
   padding-top: 0;
   padding-left: 10%;
   padding-right: 10%;
   background-color: rgba(228, 212, 163, 0.3);
   margin-top: 1%;
-  margin-bottom: 50%;
-  position: fixed;
+  margin-bottom: 4%;
 
 }
 

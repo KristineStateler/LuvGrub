@@ -4,11 +4,11 @@ const RecipeTile = props => {
   return (
   <div>
 
-      <div className="food-name"><h1>{props.name} </h1></div>
+      <div className="food-name"><h2>{props.name} </h2></div>
       <img src={props.picture} className="photos" />
       <p>{props.category} </p>
-      <p>{props.ingredients}</p>
-      <p>{props.steps} </p>
+      {/* <p>{props.ingredients}</p>
+      <p>{props.steps} </p> */}
 
   </div>
 
