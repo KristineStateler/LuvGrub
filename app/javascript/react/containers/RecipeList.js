@@ -160,10 +160,7 @@ if (this.state.recipes[this.state.currentRecipe]) {
         <SearchBar
         />
       </div>
-      <div>
-        <APIContainer
-        />
-      </div>
+
     </section>
       <div className="recipe-tile">
           <RecipeTile
@@ -184,6 +181,10 @@ if (this.state.recipes[this.state.currentRecipe]) {
             />
           </div>
           </div>
+      </div>
+      <div>
+        <APIContainer
+        />
       </div>
   </div>
     )
