@@ -16,6 +16,45 @@
 
  */
 
+ .topnav {
+     background-color: #C2C1B5;
+     overflow: hidden;
+
+
+ }
+
+ /* Style the links inside the navigation bar */
+ .topnav a {
+     float: left;
+     color: black;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: bold;
+     font-size: 100px;
+     font-family: 'Amatic SC';
+ }
+
+ .topnav p {
+     float: right;
+     color: #f2f2f2;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: bold;
+     font-size: 100px;
+    font-family: 'Amatic SC';
+ }
+
+ /* Change the color of links on hover */
+ .topnav a:hover {
+     background-color: #ddd;
+     color: black;
+ }
+
+ /* Add a color to the active/current link */
+ .topnav a.active {
+     background-color: #4CAF50;
+     color: white;
+ }
 
 
  body{
@@ -26,17 +65,20 @@
    background-size: cover;
  }
 
- .new-recipe{
-   text-align: center;
- }
 
 
- p, h2, h3, h4,h5,li, ul, ol {
+
+  p, h2, h3, h4,h5,li, ul, ol {
    font-family: 'Amatic SC';
    color: #5e8b25;
    font-weight: bold;
    font-size: 70px;
  }
+
+  img {
+    width: 80%;
+    height: auto;
+}
 
 h1{
   font-family: 'Amatic SC';
@@ -61,23 +103,17 @@ h1{
    text-align: center;
  }
 
- a {
-   font-family: 'Amatic SC';
-   color: #5e8b25;
-   font-weight: bold;
-   font-size: 110px;
- }
+
 
 
  button{
    background-color: #5e8b25;
  }
+ 
+ #search{
+   text-align: center;
+ }
 
-
-.todays-articles{
-  float: right;
-  padding-bottom: 0%;
-}
 
 .recipe-tile {
   text-align: right;
@@ -96,12 +132,17 @@ h1{
 }
 
 .liked-tile {
-  text-align: right;
+  text-align: center;
   border: 15px;
   border-style: ridge;
   display: grid;
   background-color: rgba(228, 212, 163, 0.3);
-
+  max-width: 3000px;
+  min-width: 3000px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 
 .like-buttons {
@@ -129,13 +170,6 @@ border-style: ridge;
 }
 
 
-.side-bar{
-  float: left;
-  font-size: 10px;
-  margin-top: 20%;
-  font-family: 'Amatic SC';
-  width: 40%;
-}
 
 .photos {
   float: left;
@@ -143,9 +177,4 @@ border-style: ridge;
 }
 .food-name{
   text-align: center;
-}
-
-.top-bar{
-  height: 10%;
-  background-color: #C2C1B5;
 }

@@ -154,8 +154,8 @@ if (this.state.recipes[this.state.currentRecipe]) {
   return(
 
 
-  <div>
-    <div className="side-bar">
+  <div className="whole-page">
+  <section class="top-bar-section">
       <div>
         <SearchBar
         />
@@ -164,7 +164,7 @@ if (this.state.recipes[this.state.currentRecipe]) {
         <APIContainer
         />
       </div>
-    </div>
+    </section>
       <div className="recipe-tile">
           <RecipeTile
             category={category}
