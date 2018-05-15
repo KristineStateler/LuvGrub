@@ -63,6 +63,7 @@ class SearchBar extends Component {
           category = {recipe.category}
           ingredients = {recipe.ingredients}
           steps = {recipe.steps}
+          picture={recipe.picture.url}
         />
       )
     })
@@ -74,7 +75,7 @@ class SearchBar extends Component {
            type='text'
            value={this.state.search}
            onChange={this.handleChange}
-           placeholder="Enter search terms"
+           placeholder="Search for specific recipes here!"
          />
          <input type = 'submit' value = 'Search' onClick = {this.handleSubmit}/>
        </div>

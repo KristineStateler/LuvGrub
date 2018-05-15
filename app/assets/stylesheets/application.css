@@ -109,10 +109,15 @@ h1{
  button{
    background-color: #5e8b25;
  }
- 
- #search{
-   text-align: center;
+
+ .side-bar{
+   margin:  auto;
+   width: 50%;
  }
+
+input {
+  margin: auto;
+}
 
 
 .recipe-tile {
