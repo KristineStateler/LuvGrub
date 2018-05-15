@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>OnlineOven</title>
+  <title>LuvGrub</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <%= stylesheet_link_tag 'application', media: 'all' %>
 
@@ -17,19 +17,20 @@
 </head>
 <body>
 
-  <% unless current_user %>
-  <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
-<% else %>
-  <%= current_user[:name] %>
-  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-<% end %>
-
-
-  <header class="head-bckg">
-      <h1 class="title-index">LuvGrub</h1>
-    </header>
-
-<nav class="top-bar">
+  <div class="topnav">
+  <a class="active" href="/">Home</a>
+  <%- if user_signed_in? -%>
+  <a><%= link_to 'Add A New Recipe To The Mix!', new_recipe_path %></a>
+  <a><%= link_to 'View Liked Recipes!', preferences_path %></a>
+  <p><%= current_user[:name] %></p>
+  <p><%= link_to "Logout", destroy_user_session_path, method: :delete %></p>
+    <%- else -%>
+  <p><%= link_to 'Sign Up', new_user_registration_path %></p>
+  <p><%= link_to 'Sign In', new_user_session_path %></p>
+  <p><%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %></p>
+    <%- end -%>
+</div>
+<!-- <nav class="top-bar">
     <ul class="title-area">
       <li class="name">
         <p><a href="/">Home</a></p>
@@ -43,18 +44,26 @@
             <%= value %>
           </li>
         <%- end -%>
-        <%- if current_user -%>
-             <h1><%= link_to 'Add A New Recipe To The Mix!', new_recipe_path %></h1>
+        <%- if user_signed_in? -%>
+              <h1><%= link_to 'Add A New Recipe To The Mix!', new_recipe_path %></h1>
               <h1><%= link_to 'View Liked Recipes!', preferences_path %></h1>
-
               <p><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></p>
             <%- else -%>
               <p><%= link_to 'Sign Up', new_user_registration_path %></p>
               <p><%= link_to 'Sign In', new_user_session_path %></p>
             <%- end -%>
+
+
+            <% unless current_user %>
+            <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
+          <% else %>
+            <%= current_user[:name] %>
+            <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+          <% end %>
       </div>
     </section>
-  </nav>
+  </nav> -->
+  <h1 class="title-index">LuvGrub</h1>
 
   <%= yield %>
 
