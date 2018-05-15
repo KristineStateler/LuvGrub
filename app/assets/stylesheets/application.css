@@ -16,6 +16,8 @@
 
  */
 
+
+
  body{
    background: url(images/pineapples.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -29,12 +31,19 @@
  }
 
 
- h1, p, h2, h3, h4,h5,li, ul, ol {
+ p, h2, h3, h4,h5,li, ul, ol {
    font-family: 'Amatic SC';
    color: #5e8b25;
    font-weight: bold;
    font-size: 70px;
  }
+
+h1{
+  font-family: 'Amatic SC';
+  color: #EBC37C;
+  font-weight: bold;
+  font-size: 150px;
+}
 
  label {
    font-family: 'Amatic SC';
@@ -134,4 +143,9 @@ border-style: ridge;
 }
 .food-name{
   text-align: center;
+}
+
+.top-bar{
+  height: 10%;
+  background-color: #C2C1B5;
 }
