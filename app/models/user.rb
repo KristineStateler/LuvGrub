@@ -18,6 +18,15 @@ class User < ApplicationRecord
   end
 end
 
+# def liked_recipes
+#   # look for current user preferenes where like is true for each of those find related recipe
+#
+#   # methoed return an array of all the recipes that have been liked
+# end
+#
+# def disliked_recipes
+# end
+
 def self.from_omniauth(auth)
   where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
     user.email = auth.info.email
