@@ -21,7 +21,7 @@ class APIContainer extends Component {
 
      return (
        <div className="todays-articles">
-       <h2>Want more recipes?</h2>
+       <h2>Want more??</h2>
        <div>
          {hits.map(hit =>
            <div key={hit.objectID}>
