@@ -4,7 +4,7 @@ const LikedRecipe = props => {
   return (
 
   <div className="liked-tile">
-      <h1>{props.name} </h1>
+      <h3>{props.name} </h3>
       <img src={props.picture} className="photos" />
       <p>{props.category} </p>
       <p>{props.ingredients}</p>

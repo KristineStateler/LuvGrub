@@ -59,10 +59,12 @@ render() {
 
 
   return(
-
+<div>
+   <h1>LuvGrub</h1>
     <div>
       {this.allLikedRecipes()}
     </div>
+  </div>  
   )
   }
 }

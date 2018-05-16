@@ -155,6 +155,7 @@ if (this.state.recipes[this.state.currentRecipe]) {
 
 
   <div className="whole-page">
+      <h1>LuvGrub</h1>
   <section class="top-bar-section">
       <div>
         <SearchBar

@@ -16,6 +16,7 @@
 
  */
 
+
  .topnav {
      background-color: #C2C1B5;
      overflow: hidden;
@@ -24,7 +25,7 @@
  }
 
  .header{
-   
+
  }
 
  /* Style the links inside the navigation bar */
@@ -34,7 +35,7 @@
      text-align: center;
      padding: 14px 16px;
      text-decoration: bold;
-     font-size: 30px;
+     font-size: 20px;
      font-family:'Poppins', sans-serif;
  }
 
@@ -44,9 +45,10 @@
      text-align: center;
      padding: 14px 16px;
      text-decoration: bold;
-     font-size: 30px;
+     font-size: 20px;
     font-family: 'Poppins', sans-serif;
  }
+
 
  /* Change the color of links on hover */
  .topnav a:hover {
@@ -71,16 +73,17 @@
 
 
 
-  p, h2, h3, h4,h5,li, ul, ol {
+  p, h2, h4,li, ul, ol {
    font-family: 'Poppins', sans-serif;
-   color: #5e8b25;
+   color: #3F4636;
    font-weight: bold;
-   font-size: 40px;
+   font-size: 30px;
  }
 
   img {
-    width: 80%;
+    width: 30%;
     height: auto;
+    margin: auto;
 }
 
 
@@ -88,8 +91,16 @@ h1{
   font-family: 'Poppins', sans-serif;
   color: #3F4636;
   font-weight: bold;
-  font-size: 100px;
+  font-size: 80px;
   text-align: center;
+}
+
+h3 {
+  font-family: 'Poppins', sans-serif;
+  color: #3F4636;
+  font-weight: bold;
+  font-size: 40px;
+
 }
 
  label {
@@ -102,12 +113,19 @@ h1{
 
  h6{
    font-family: 'Poppins', sans-serif;
-   color: #5e8b25;
+   color: #3F4636;
    font-weight: bold;
-   font-size: 110px;
+   font-size: 50px;
    text-align: center;
  }
 
+label {
+  font-family: 'Poppins', sans-serif;
+  color: #3F4636;
+  font-weight: bold;
+  font-size: 26px;
+
+}
 
 
 
@@ -147,12 +165,11 @@ input {
   border-style: ridge;
   display: grid;
   background-color: rgba(228, 212, 163, 0.3);
-  max-width: 3000px;
-  min-width: 3000px;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 10%;
-  margin-bottom: 10%;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-bottom: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .like-buttons {
@@ -162,16 +179,15 @@ input {
 
 .submitted-recipes{
 background-color: rgba(228, 212, 163, 0.3);
-margin-right: 10%;
-margin-left: 10%;
+margin-right: 15%;
+margin-left: 15%;
 padding-left: 4%;
 padding-right: 4%;
-padding-top: 4%;
-padding-bottom: 4%;
+padding-top: 1%;
+padding-bottom: 1%;
 border: 15px;
 border-style: ridge;
-
-
+margin-bottom: 15%;
 
 }
 .like-button {
@@ -187,4 +203,16 @@ border-style: ridge;
 }
 .food-name{
   text-align: center;
+}
+
+.todays-articles {
+  border: 1px;
+  border-style: ridge;
+  padding-right: 2%;
+  margin-left: 85%;
+  margin-right: 3%;
+  text-align: center;
+  padding-left: 2%;
+  background-color: #f3efee;
+  margin-bottom: 5%;
 }
