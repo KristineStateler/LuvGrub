@@ -90,11 +90,13 @@
    font-size: 30px;
  }
 
-  img {
-    width: 30%;
-    height: auto;
-    margin: auto;
+  img.photos {
+    width: auto;
+    height:auto;
+    margin: center;
+
 }
+
 
 
 h1{
@@ -140,7 +142,7 @@ label {
 
 
  button{
-   background-color: #FDE247;
+   background-color:  #57D3A7;
  }
 
  .side-bar{
@@ -161,34 +163,43 @@ input {
   margin-left: 30%;
   margin-right: 30%;
   padding-top: 0;
-  padding-left: 10%;
-  padding-right: 10%;
-  background-color: rgba(228, 212, 163, 0.3);
+  padding-left: 7%;
+  padding-right: 7%;
+  background-color: rgba(253, 226, 71, 0.3);
   margin-top: 1%;
   margin-bottom: 4%;
 
 }
+
 
 .liked-tile {
   text-align: center;
   border: 15px;
   border-style: ridge;
   display: grid;
-  background-color: rgba(228, 212, 163, 0.3);
+  background-color: rgba(253, 226, 71, 0.3);
   margin-left: 25%;
   margin-right: 25%;
   margin-bottom: 5%;
   padding-left: 10%;
   padding-right: 10%;
+
 }
 
+#button1 , #button2 {
+display:inline-block;
+margin: 4px;
+width: auto;
+height:auto;
+
+}
 .like-buttons {
-  font-size: 90px;
   text-align: center;
+
 }
 
 .submitted-recipes{
-background-color: rgba(228, 212, 163, 0.3);
+background-color: rgba(253, 226, 71, 0.3);
 margin-right: 15%;
 margin-left: 15%;
 padding-left: 4%;
@@ -206,14 +217,15 @@ margin-bottom: 15%;
 }
 
 
-
 .photos {
   float: left;
   padding-bottom: 7%;
 }
-.food-name{
+.food-name h2 {
   text-align: center;
+  font-size: 35px;
 }
+
 
 .todays-articles {
   border: 1px;

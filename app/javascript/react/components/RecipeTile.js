@@ -2,11 +2,10 @@ import React from 'react';
 
 const RecipeTile = props => {
   return (
-  <div onSwipe={props.detectswipe}>
+  <div>
 
       <div className="food-name"><h2>{props.name} </h2></div>
-      <img src={props.picture} className="photos" />
-      <p>{props.category} </p>
+      <div><img src={props.picture} className="photos" /></div><br></br>
       {/* <p>{props.ingredients}</p>
       <p>{props.steps} </p> */}
 

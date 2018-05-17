@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import RecipeTile from "./RecipeTile"
+import LikedRecipe from "./LikedRecipe"
 
 class SearchBar extends Component {
   constructor(props) {
@@ -56,7 +56,7 @@ class SearchBar extends Component {
   render() {
     let finalResults = this.state.finalResults.map(recipe => {
       return(
-        <RecipeTile
+        <LikedRecipe
           key = {recipe.id}
           id = {recipe.id}
           name = {recipe.name}
@@ -79,7 +79,7 @@ class SearchBar extends Component {
          />
          <input type = 'submit' value = 'Search' onClick = {this.handleSubmit}/>
        </div>
-       <div className="row">
+       <div>
          {finalResults}
        </div>
      </div>
