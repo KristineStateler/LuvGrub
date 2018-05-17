@@ -164,24 +164,28 @@ if (this.state.recipes[this.state.currentRecipe]) {
 
     </section>
       <div className="recipe-tile">
+        <div>
           <RecipeTile
             category={category}
             name={name}
             picture={picture}
             steps={steps}
             ingredients={ingredients}
-            detectswipe={this.detectswipe}
+
            />
+         </div>
            <div className="like-buttons">
+             <div id="button1">
+               <DislikeTile type="left"
+                 handleSwipe={this.swipeLeft}
+               />
+             </div>
+             <div id="button2">
               <LikeTile
                 type="right"
                 handleSwipe={this.handleSwipe}
               />
-          <div>
-            <DislikeTile type="left"
-              handleSwipe={this.swipeLeft}
-            />
-          </div>
+            </div>
           </div>
       </div>
   </div>
