@@ -24,16 +24,22 @@
 
  }
 
- .header{
+ @media only screen and (min-width: 40.0625em){
+ .top-bar-section li:not(.has-form) a:not(.button) {
+     background:  #799E54;
+   }
 
- }
-
+.top-bar {
+         background:  #799E54;
+         // overflow: visible;
+       }
+}
  /* Style the links inside the navigation bar */
  .topnav a {
      float: left;
      color: #3F4636;
      text-align: center;
-     padding: 14px 16px;
+     padding: 6.5px 16px;
      text-decoration: bold;
      font-size: 20px;
      font-family:'Poppins', sans-serif;
@@ -62,6 +68,10 @@
      color: white;
  }
 
+ .top-bar-section ul li {
+  background: none;
+  color: white;
+ }
 
  body{
    background: image-url("pineapples.jpg") no-repeat center center fixed;
@@ -130,7 +140,7 @@ label {
 
 
  button{
-   background-color: #179BAA;
+   background-color: #FDE247;
  }
 
  .side-bar{

@@ -1,4 +1,6 @@
 <h2>Sign up</h2>
+<a><%= link_to image_tag("facebook.png"), user_facebook_omniauth_authorize_path, :class => 'icon btn' %></a>
+
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>

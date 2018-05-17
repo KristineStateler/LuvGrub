@@ -1,74 +1,84 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
   <title>LuvGrub</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <%= stylesheet_link_tag 'application', media: 'all' %>
 
     <%= javascript_include_tag "vendor/modernizr" %>
-    <%= javascript_pack_tag 'application' %>
+    <%= javascript_include_tag "application" %>
+    <%= javascript_pack_tag 'application'%>
 
   <%= csrf_meta_tags %>
   <style>
     @import url('https://fonts.googleapis.com/css?family=Poppins');
 </style>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118597490-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-118597490-1');
+  </script>
 </head>
 <body>
+<nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="topnav">
+      <a class="active" href="/">Home</a>
+    </li>
 
-  <div class="topnav">
-  <a class="active" href="/">Home</a>
-  <%- if user_signed_in? -%>
-  <a><%= link_to 'Add A New Recipe To The Mix!', new_recipe_path %></a>
-  <a><%= link_to 'View Liked Recipes!', preferences_path %></a>
-  <p><%= link_to "Logout", destroy_user_session_path, method: :delete %></p>
-  <p><%= current_user[:name] %></p>
-    <%- else -%>
-  <p><%= link_to 'Sign Up', new_user_registration_path %></p>
-  <p><%= link_to 'Sign In', new_user_session_path %></p>
-  <p><%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %></p>
-    <%- end -%>
-</div>
-<!-- <nav class="top-bar">
-    <ul class="title-area">
-      <li class="name">
-        <p><a href="/">Home</a></p>
-      </li>
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+
+    <ul class="left">
+
+    <% if user_signed_in? %>
+
+    <li><%= link_to 'Add A New Recipe To The Mix!', new_recipe_path %></li>
+    <li><%= link_to 'View Liked Recipes!', preferences_path %></li>
+    <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+  </ul>
+  <ul class="right">
+    <li><%= current_user[:name] %></li>
+
+
+
+
+
+    <% else %>
+
+    <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+    <li><%= link_to 'Sign In', new_user_session_path %></li>
+    <% end %>
+
     </ul>
 
-    <section class="top-bar-section">
-      <div class="right">
-        <%- flash.each do |key, value| -%>
-          <li id="flash" class="flash flash-<%= key %>">
-            <%= value %>
-          </li>
-        <%- end -%>
-        <%- if user_signed_in? -%>
-              <h1><%= link_to 'Add A New Recipe To The Mix!', new_recipe_path %></h1>
-              <h1><%= link_to 'View Liked Recipes!', preferences_path %></h1>
-              <p><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></p>
-            <%- else -%>
-              <p><%= link_to 'Sign Up', new_user_registration_path %></p>
-              <p><%= link_to 'Sign In', new_user_session_path %></p>
-            <%- end -%>
+  </section>
+</nav>
 
+  <% if !flash.empty? %>
+    <div class="row">
+      <div class="columns medium-8 medium-centered">
+        <div class="flash panel callout text-center">
 
-            <% unless current_user %>
-            <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
-          <% else %>
-            <%= current_user[:name] %>
-            <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-          <% end %>
+          <%- flash.each do |key, value| -%>
+            <div class="flash flash-<%= key %>">
+              <%= value %>
+            </div>
+          <%- end -%>
+
+          </div>
+        </div>
       </div>
-    </section>
-  </nav> -->
-  <div className="title-index">
-</div>
+    <% end %>
+    </li>
+    <%= yield %>
+    <%= javascript_include_tag 'application' %>
+    <%= yield :extra_footer %>
 
-  <%= yield %>
-
-  <%= javascript_include_tag 'application' %>
-  <%= yield :extra_footer %>
-</body>
+  </body>
 </html>
