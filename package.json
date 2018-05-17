@@ -9,6 +9,7 @@
     "react-dom": "~15.4.2",
     "react-dropzone": "~4.2.1",
     "react-router": "3.2.0",
+    "react-tinderable": "^0.1.8",
     "react_ujs": "^2.4.4"
   },
   "devDependencies": {
