@@ -4,7 +4,7 @@ class RecipesController < ApplicationController
 
 
   def new
-    @recipe = Recipe.new
+        @recipe = Recipe.new
   end
 
   def create
@@ -21,7 +21,7 @@ class RecipesController < ApplicationController
   end
 
   def show
-    @recipe = Recipe.find(params[:id])
+      @recipe = Recipe.find(params[:id])
   end
 
   protected

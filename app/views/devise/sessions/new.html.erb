@@ -1,4 +1,5 @@
 <h2>Log in</h2>
+<a><%= link_to image_tag("facebook.png"), user_facebook_omniauth_authorize_path, :class => 'icon btn' %></a>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
