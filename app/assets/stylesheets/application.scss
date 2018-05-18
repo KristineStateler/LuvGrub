@@ -87,7 +87,7 @@
    font-family: 'Poppins', sans-serif;
    color: #3F4636;
    font-weight: bold;
-   font-size: 30px;
+   font-size: 22px;
  }
 
   img.photos {
@@ -238,3 +238,28 @@ margin-bottom: 15%;
   background-color: #f3efee;
   margin-bottom: 5%;
 }
+
+form#new_user.new_user{
+background-color: rgba(253, 226, 71, 0.3);
+margin-right: 15%;
+margin-left: 15%;
+padding-left: 4%;
+padding-right: 4%;
+padding-top: 1%;
+padding-bottom: 1%;
+border: 15px;
+border-style: ridge;
+margin-bottom: 15%;
+
+}
+
+img{
+ max-width: 290px;
+ display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+ #fb-button{
+   max-width: 40px;
+ }

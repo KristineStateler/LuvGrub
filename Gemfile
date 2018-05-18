@@ -60,3 +60,11 @@ gem 'webpacker', '~> 3.3'
 gem 'carrierwave'
 gem 'pg'
 gem 'omniauth-facebook'
+gem 'seed_dump'
+gem 'fog'
+gem 'mini_magick'
+
+
+group :development, :test do
+  gem "dotenv-rails"
+end

@@ -1,5 +1,7 @@
-<h2>Log in</h2>
-<a><%= link_to image_tag("facebook.png"), user_facebook_omniauth_authorize_path, :class => 'icon btn' %></a>
+<h1>LuvGrub</h1>
+<div className="fb-button">
+<a id="fb-button"><%= link_to image_tag("facebook.png"), user_facebook_omniauth_authorize_path, :class => 'icon btn' %></a>
+</div>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
@@ -24,4 +26,5 @@
   </div>
 <% end %>
 
+</div>
 <%= render "devise/shared/links" %>
