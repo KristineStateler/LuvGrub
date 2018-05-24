@@ -188,10 +188,9 @@ input {
 
 #button1 , #button2 {
 display:inline-block;
-margin: 4px;
+margin: 8px;
 width: auto;
-height:auto;
-
+height:auto
 }
 .like-buttons {
   text-align: center;
@@ -263,3 +262,7 @@ img{
  #fb-button{
    max-width: 40px;
  }
+
+a {
+  color: #E6DEDC;
+}
