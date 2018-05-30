@@ -18,3 +18,12 @@ My app, LuvGrub, is like Tinder, but for food. -As this is a social app, I decid
 -There is  a search bar just in case a user wants to search for a specific kind of recipe, or food (Search Bar is built in React).
 -A user can also add their own recipes if they dont find what they are looking for(Form is built in Rails).
    ---This form also allows for pictures to be uploaded via CarrierWave and then they are stored in an Amazon S3 Bucket.
+
+
+-In progress: making the whole application mobile friendly. Currently the mobile friendly parts are:
+  The nav bar (it changes to a drop down menu)
+  Th buttons are mobile friendly and scale to mobile
+  The text scales down to a mobile device
+
+Working on:
+  The swipeLeft and handleSwipe and detectSwipe features in React
