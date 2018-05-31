@@ -1,0 +1,8 @@
+{
+  "runtime":{
+    "majorVersion":"2.4.1"
+  },
+  "command": "ruby app.rb",
+  "release": {},
+  "notes": "Ruby Hello World"
+}
